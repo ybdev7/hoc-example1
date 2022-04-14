@@ -1,15 +1,20 @@
 import "./App.css";
-import AuthorsListWithSearch from "./components/AuthorsList";
 import { authors, books } from "./data/data";
-import BooksListWithSearch from "./components/BooksList";
+import SearchableGenericList, {
+  AuthorListProps,
+  BookListProps,
+} from "./components/SearchableGenericList";
+
 function App() {
+  const bookList: BookListProps = new BookListProps(books);
+  const authorList: AuthorListProps = new AuthorListProps(authors);
   return (
     <>
       <h2>Authors</h2>
-      <AuthorsListWithSearch data={authors} />
+      <SearchableGenericList {...authorList} />
 
       <h2>Books</h2>
-      <BooksListWithSearch data={books} />
+      <SearchableGenericList {...bookList} />
     </>
   );
 }

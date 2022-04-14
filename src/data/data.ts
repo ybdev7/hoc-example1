@@ -13,6 +13,7 @@ export const authors: Array<IAuthor> = [
     last: "Dumas",
     bornAt: "France",
   },
+  { id: "author3", first: "Emily Jane", last: "Brontë", bornAt: "England" },
 ];
 
 export const books: Array<IBook> = [
@@ -27,5 +28,11 @@ export const books: Array<IBook> = [
     name: "The Three Musketeers",
     authors: [authors[1]],
     pubDate: new Date(1845, 7, 1),
+  },
+  {
+    id: "book3",
+    name: "Wuthering Heights",
+    authors: [authors[2]],
+    pubDate: new Date(1847, 12, 1),
   },
 ];

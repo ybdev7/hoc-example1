@@ -13,9 +13,13 @@ const Book = ({ book }: IBookProps) => {
           <b>{book.name}</b>
         </span>
         <span>{" by "}</span>
-        {book.authors.map((author) => (
+        {book.authors.map((author, index) => (
           <>
-            <Author author={author} />
+            <Author
+              key={`book-${book.id}-author-${author.id}`}
+              author={author}
+            />
+            {index + 1 < book.authors.length ? <span>{", "}</span> : null}
           </>
         ))}
       </p>
