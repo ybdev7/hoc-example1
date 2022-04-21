@@ -22,6 +22,8 @@ const Book = ({ book }: IBookProps) => {
             {index + 1 < book.authors.length ? <span>{", "}</span> : null}
           </>
         ))}
+
+        <span>{" Rating: " + book.rating}</span>
       </p>
     </>
   );

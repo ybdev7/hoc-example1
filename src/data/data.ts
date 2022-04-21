@@ -6,14 +6,22 @@ export const authors: Array<IAuthor> = [
     first: "Lewis",
     last: "Carol",
     bornAt: "England",
+    rating: 1.1,
   },
   {
     id: "auhtor2",
     first: "Alexandre",
     last: "Dumas",
     bornAt: "France",
+    rating: 2.2,
   },
-  { id: "author3", first: "Emily Jane", last: "Brontë", bornAt: "England" },
+  {
+    id: "author3",
+    first: "Emily Jane",
+    last: "Brontë",
+    bornAt: "England",
+    rating: 3.3,
+  },
 ];
 
 export const books: Array<IBook> = [
@@ -22,17 +30,20 @@ export const books: Array<IBook> = [
     name: "Alice in Wonderland",
     authors: [authors[0]],
     pubDate: new Date(1865, 11, 18),
+    rating: 2.2,
   },
   {
     id: "book2",
     name: "The Three Musketeers",
     authors: [authors[1]],
     pubDate: new Date(1845, 7, 1),
+    rating: 3.3,
   },
   {
     id: "book3",
     name: "Wuthering Heights",
     authors: [authors[2]],
     pubDate: new Date(1847, 12, 1),
+    rating: 4.4,
   },
 ];
